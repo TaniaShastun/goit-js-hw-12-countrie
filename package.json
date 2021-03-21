@@ -1,5 +1,5 @@
 {
-  "name": "goit-js-hw-10-food-servic",
+  "name": "goit-js-hw-12-countrie",
   "version": "1.1.0",
   "description": "## Developing",
   "main": "index.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://https://github.com/TaniaShastun/goit-js-hw-10-food-servic.git"
+    "url": "git+https://https://github.com/TaniaShastun/goit-js-hw-12-countrie.git"
   },
   "keywords": [],
   "author": "TaniaShastun <tania.shastn@gmail.com >",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TaniaShastun/goit-js-hw-10-food-servic/issues"
+    "url": "https://github.com/TaniaShastun/goit-js-hw-12-countrie/issues"
   },
-  "homepage": " https://taniashastun.github.io/goit-js-hw-10-food-servic/",
+  "homepage": " https://taniashastun.github.io/goit-js-hw-12-countrie/",
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
