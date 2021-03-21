@@ -1,0 +1,18 @@
+{{#each this}}
+      <h2 class="section__caption">{{name}}</h2>
+      <div class="section">
+      <div class="section__description">
+        <p class="section__name"> Capital: <span class="desk">{{capital}}</span></p>
+        <p class="section__population">Population: <span>{{population}}</span></p>
+        <p class="section__language"> Languages: </p>
+          <ul class="section__language-list">
+            {{#each languages}}
+          <li class="section__language-item">{{this.name}}</li>
+          {{/each}}
+        </ul>
+      </div>
+      <div class="section__image">
+        <img src="{{flag}}" alt="image flag country"  class="section__photo">
+      </div>
+    </div>
+    {{/each}}
