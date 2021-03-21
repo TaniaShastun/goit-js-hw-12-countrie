@@ -3,8 +3,9 @@ import fetchCountries from './fetchCountries';
 import {debounce} from 'lodash';
 import countryBuildHtml from './template/country.hbs';
 import countryBuildList from './template/country-list.hbs';
-import PNotify from '@pnotify/core/dist/PNotify.js';
+//import PNotify from '@pnotify/core/dist/PNotify.js';
 import '@pnotify/core/dist/BrightTheme.css';
+const { error ,notice } = require('@pnotify/core');
 
 const choiseInput = document.querySelector('input');
 choiseInput.addEventListener('input', _.debounce(writeCountry, 700));
@@ -13,7 +14,6 @@ const choiseUlList = document.querySelector('#country-list');
 
 function writeCountry(event) {
   clearInput();
-  PNotify.closeAll();
   if (!event.target.value) {
     return;
   }
@@ -22,9 +22,9 @@ function writeCountry(event) {
 
 function buildResult(array) {
   if (array.length > 10) {
-    PNotify.error({
+    error({
       title: 'Oh No!',
-      text: 'Something terrible happened.',
+      text: 'Too many matches found.Please enter a more specific query.',
     });
   } else if (array.length >= 2 && array.length <= 10) {
     const markUpList = array.map(name => countryBuildList(name)).join('');
@@ -33,7 +33,7 @@ function buildResult(array) {
     const markUp = countryBuildHtml(array);
     choiseCountry.insertAdjacentHTML('beforeend', markUp);
   } else{
-    PNotify.notice({
+    notice({
       title: 'WARNING!!!',
       text: 'ENTER CORRECT COUNTRY'
     });

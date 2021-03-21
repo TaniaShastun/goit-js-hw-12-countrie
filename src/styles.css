@@ -82,3 +82,8 @@ img {
   width: 100%;
   height: auto;
 }
+
+.pronify {
+  display:flex;
+  top: auto;
+}
